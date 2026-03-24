@@ -1,4 +1,4 @@
-// Shuffle background images - same across all pages for current session
+// Shuffle background images - different background for each page
 (function() {
     var images = [
         "/img/06074b0baf1edf46c4a444164c7b8071.jpg",
@@ -47,16 +47,11 @@
         });
     }
     
-    // Get or create session image
-    var sessionImage = sessionStorage.getItem('bg-shuffle-image');
-    if (!sessionImage) {
-        sessionImage = getRandomImage();
-        sessionStorage.setItem('bg-shuffle-image', sessionImage);
-    }
-    
-    setBackground(sessionImage);
+    // Each page gets its own random background
+    var randomImage = getRandomImage();
+    setBackground(randomImage);
     
     // Preload image for faster display
     var img = new Image();
-    img.src = sessionImage;
+    img.src = randomImage;
 })();
