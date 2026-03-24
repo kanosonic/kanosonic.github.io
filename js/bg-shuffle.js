@@ -18,8 +18,6 @@
         "img/941576790b1a8ffdc01ff77f700fb10b_720.jpg",
         "img/98de22161b9a8fdebb5c2873b99f393e_720.png",
         "img/99e3f5987c3791e97e22ab9ef80a1687.png",
-        "img/a5ec62ccebf8f7fcbcda6a5f8369be03.png",
-        "img/ad262419d57c0d6cc0570d00e5eacc3e.jpg",
         "img/b6f85f79442d760d954162a55007e86e.png",
         "img/bd6488d2959859d39be51e6090255073.jpg",
         "img/c85d0de258881b973232ff179477376e_0.png",
@@ -33,7 +31,6 @@
         
         var header = document.querySelector('.intro-header');
         if (header) {
-            // Clear all background properties first
             header.style.background = '';
             header.style.backgroundImage = "url('" + randomImage + "')";
             header.style.backgroundRepeat = 'no-repeat';
