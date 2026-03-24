@@ -4,6 +4,7 @@ SEOTitle: Kanosonic's Blog | Digital IC Design
 description: "Xidian University student | Digital IC Design"
 url: "https://kanosonic.github.io"
 baseurl: ""
+header-img: "img/home-bg.jpg"
 permalink: /:title/
 
 # Build settings

@@ -1,6 +1,7 @@
 ---
-layout: home
+layout: page
 title: Home
+header-img: "img/home-bg.jpg"
 ---
 
 ## Hi, I'm Kanosonic
