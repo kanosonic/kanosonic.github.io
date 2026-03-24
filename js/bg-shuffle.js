@@ -5,7 +5,6 @@
         "img/12a2b8b736ec89a633f898860f9c9c76.png",
         "img/1565f046b08693e76ea6e444bbc25fde.jpg",
         "img/1ef7bdd6d64bdd8e5aea13fbec0f8c12_0.png",
-        "img/1f456d82618ce2528530954056a2a58f.png",
         "img/23303dfc20fef38a09e4864254842f75.jpg",
         "img/246f264647cf119a2e3483a9f0d6371c.jpg",
         "img/3435bba775613b1ca4f25453ae5c25e3.png",
@@ -24,7 +23,6 @@
         "img/87f3c17856ee82a774e42d88649f1834.jpg",
         "img/89f790f659a1d73fe6f3e432cb6d43d8.jpg",
         "img/8c164e26809009f4d31b308c4c1c26cd.png",
-        "img/941576790b1a8ffdc01ff77f700fb10b_720.jpg",
         "img/98de22161b9a8fdebb5c2873b99f393e_720.png",
         "img/99e3f5987c3791e97e22ab9ef80a1687.png",
         "img/a4eecdb219555830fb5fe35c3f755843.jpg",
@@ -37,22 +35,34 @@
         "img/e0573944d3631f5599c7699a366e9ac4.png"
     ];
     
+    var applied = false;
+    
     function setBackground() {
+        var randomImage = images[Math.floor(Math.random() * images.length)];
+        
         var headers = document.querySelectorAll('.intro-header');
         
         if (headers.length === 0) {
-            setTimeout(setBackground, 200);
             return;
         }
         
-        var randomImage = images[Math.floor(Math.random() * images.length)];
-        
         headers.forEach(function(header) {
-            header.setAttribute('style', 'background: url(' + randomImage + ') no-repeat center center !important; background-size: cover !important; background-attachment: scroll !important; -webkit-background-size: cover !important; -moz-background-size: cover !important; -o-background-size: cover !important;');
+            if (!header.style.backgroundImage || header.style.backgroundImage.indexOf('url') === -1) {
+                header.style.background = 'url(' + randomImage + ') no-repeat center center';
+                header.style.backgroundSize = 'cover';
+            }
         });
+        
+        applied = true;
     }
     
+    // Try immediately
     setBackground();
     
-    window.addEventListener('load', setBackground);
+    // Try again after load
+    window.addEventListener('load', function() {
+        setBackground();
+        // Keep trying for a bit
+        setTimeout(setBackground, 500);
+    });
 })();
