@@ -1,4 +1,4 @@
-// Shuffle background images
+// Shuffle background images - same across all pages for current session
 (function() {
     var images = [
         "img/06074b0baf1edf46c4a444164c7b8071.jpg",
@@ -35,33 +35,28 @@
         "img/e0573944d3631f5599c7699a366e9ac4.png"
     ];
     
-    var applied = false;
-    
-    function setBackground() {
-        var randomImage = images[Math.floor(Math.random() * images.length)];
-        
-        var headers = document.querySelectorAll('.intro-header');
-        
-        if (headers.length === 0) {
-            return;
-        }
-        
-        headers.forEach(function(header) {
-            if (!header.style.backgroundImage || header.style.backgroundImage.indexOf('url') === -1) {
-                header.style.background = 'url(' + randomImage + ') no-repeat center center';
-                header.style.backgroundSize = 'cover';
-            }
-        });
-        
-        applied = true;
+    function getRandomImage() {
+        return images[Math.floor(Math.random() * images.length)];
     }
     
-    // Try immediately
-    setBackground();
+    function setBackground(image) {
+        var headers = document.querySelectorAll('.intro-header');
+        headers.forEach(function(header) {
+            header.style.background = 'url(' + image + ') no-repeat center center';
+            header.style.backgroundSize = 'cover';
+        });
+    }
     
-    // Try again after load
-    window.addEventListener('load', function() {
-        setBackground();
-        setTimeout(setBackground, 500);
-    });
+    // Get or create session image
+    var sessionImage = sessionStorage.getItem('bg-shuffle-image');
+    if (!sessionImage) {
+        sessionImage = getRandomImage();
+        sessionStorage.setItem('bg-shuffle-image', sessionImage);
+    }
+    
+    setBackground(sessionImage);
+    
+    // Preload image for faster display
+    var img = new Image();
+    img.src = sessionImage;
 })();
