@@ -62,7 +62,6 @@
     // Try again after load
     window.addEventListener('load', function() {
         setBackground();
-        // Keep trying for a bit
         setTimeout(setBackground, 500);
     });
 })();
