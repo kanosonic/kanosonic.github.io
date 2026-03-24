@@ -39,3 +39,6 @@ featured-tags: false
 
 # MathJax
 page-mathjax: false
+
+# Custom
+shuffle_background: true

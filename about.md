@@ -5,12 +5,12 @@ title: About
 
 ## About Me
 
-I'm a student at **Xidian University** (2023.9 - Present), majoring in Computer Engineering.
+I'm a student at **Xidian University** (2023.9 - Present), studying Digital IC Design.
 
 ### Interests
 
-- **Digital Design** - RTL design, FPGA development
-- **Verification** - UVM, SystemVerilog, functional verification
+- **Digital IC Design** - RTL design, FPGA development
+- **Verilog** - Hardware description language
 
 ### Projects
 
