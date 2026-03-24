@@ -1,0 +1,42 @@
+# Site settings
+title: Kanosonic's Blog
+description: "Xidian University student | Digital IC Design"
+url: "https://kanosonic.github.io"
+baseurl: ""
+permalink: /:title/
+
+# Build settings
+remote_theme: mmistakes/minimal-mistakes
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Paginate
+paginate: 5
+paginate_path: /page:num/
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Author
+author:
+  name: Kanosonic
+  bio: "Xidian University Student | Digital IC Design"
+  avatar: "https://avatars.githubusercontent.com/u/244021648?s=200&v=4"
+  links:
+    - { label: "GitHub", icon: "fab fa-github", url: "https://github.com/kanosonic" }
+
+# Footer
+footer:
+  links:
+    - { icon: "fab fa-github", url: "https://github.com/kanosonic" }
