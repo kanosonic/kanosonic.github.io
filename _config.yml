@@ -1,18 +1,17 @@
 # Site settings
 title: Kanosonic's Blog
+SEOTitle: Kanosonic's Blog | Digital IC Design
 description: "Xidian University student | Digital IC Design"
 url: "https://kanosonic.github.io"
 baseurl: ""
 permalink: /:title/
 
 # Build settings
-remote_theme: mmistakes/minimal-mistakes
 markdown: kramdown
 highlighter: rouge
 
 # Plugins
 plugins:
-  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -28,15 +27,17 @@ exclude:
   - node_modules
   - vendor
 
-# Author
-author:
-  name: Kanosonic
-  bio: "Xidian University Student | Digital IC Design"
-  avatar: "https://avatars.githubusercontent.com/u/244021648?s=200&v=4"
-  links:
-    - { label: "GitHub", icon: "fab fa-github", url: "https://github.com/kanosonic" }
+# Author info
+github_username: kanosonic
+email: kanosonic0912@gmail.com
 
-# Footer
-footer:
-  links:
-    - { icon: "fab fa-github", url: "https://github.com/kanosonic" }
+# Sidebar
+sidebar: true
+sidebar-about-description: "Xidian University Student | Digital IC Design"
+sidebar-avatar: https://avatars.githubusercontent.com/u/244021648?s=200&v=4
+
+# Featured Tags
+featured-tags: false
+
+# MathJax
+page-mathjax: false
