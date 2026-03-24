@@ -31,9 +31,15 @@
     function setBackground() {
         var randomImage = images[Math.floor(Math.random() * images.length)];
         
-        var header = document.querySelector('.intro-header') || document.querySelector('#page-header');
+        var header = document.querySelector('.intro-header');
         if (header) {
-            header.style.setProperty('background-image', "url('" + randomImage + "')", 'important');
+            // Clear all background properties first
+            header.style.background = '';
+            header.style.backgroundImage = "url('" + randomImage + "')";
+            header.style.backgroundRepeat = 'no-repeat';
+            header.style.backgroundPosition = 'center center';
+            header.style.backgroundSize = 'cover';
+            header.style.backgroundAttachment = 'scroll';
         }
     }
     
