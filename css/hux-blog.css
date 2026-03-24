@@ -1110,10 +1110,7 @@ samp {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 0px;
-}
-.intro-header.no-bg {
-  background-image: none;
-  background-color: #333;
+  /* 0 on mobile, modify by Hux */
 }
 .intro-header.style-text {
   background: none;

@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-</head>
-<body>
-  <header class="site-header">
-    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-    </nav>
-  </header>
 
-  <main class="page-content">
+{% include head.html %}
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    {% include nav.html %}
+    {% include search.html %}
+
     {{ content }}
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Kanosonic</p>
-  </footer>
+    {% include footer.html %}
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
 </body>
+
 </html>
