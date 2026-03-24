@@ -9,9 +9,11 @@ permalink: /:title/
 # Build settings
 markdown: kramdown
 highlighter: rouge
+remote_theme: jekyll/minima
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
