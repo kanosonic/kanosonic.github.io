@@ -21,6 +21,7 @@ Xidian University | Digital IC Design
 
 ### Projects
 
+- [ez_cpu_RV32I](https://github.com/kanosonic/ez_cpu_RV32I) - An easy CPU with 5-stage pipeline based on RV32I
 - [ez_modules](https://github.com/kanosonic/ez_modules) - Easy Verilog modules for self-learning
 
 ---
