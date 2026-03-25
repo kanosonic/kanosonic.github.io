@@ -1,5 +1,5 @@
 # Kanosonic's Blog
 
-A personal blog for digital design and verification.
+A personal blog built by vibe coding.
 
 Built with [Hux Blog](https://huangxuan.me) theme.
