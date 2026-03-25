@@ -10,7 +10,7 @@ I'm a student at **Xidian University** (2023.9 - Present), studying Digital IC D
 ### Interests
 
 - **Digital IC Design** - RTL design, FPGA development
-- **Verilog** - Hardware description language
+- **Digital IC Verification** - UVM, FPV
 
 ### Projects
 
