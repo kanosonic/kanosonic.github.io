@@ -9,8 +9,11 @@ I'm a student at **Xidian University** (2023.9 - Present), studying Digital IC D
 
 ### Interests
 
-- **Digital IC Design** - RTL design, FPGA development
-- **Verilog** - Hardware description language
+- **Computer Architecture**: I'm passionate about understanding how computers work at a fundamental level.
+
+- **Formal Verification**: I have a keen interest in ensuring the correctness of hardware designs through formal methods.
+
+- **AI Accelerators**: I'm fascinated by the design and optimization of hardware for artificial intelligence applications.
 
 ### Projects
 
