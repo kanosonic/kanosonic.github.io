@@ -21,7 +21,7 @@
                 <div class="navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         {% for page in site.pages %}
-                        {% if page.title and page.hide-in-nav != true %}
+                        {% if page.title and page.hide-in-nav != true and page.title != 'Home' %}
                         <li>
                             <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                         </li>
